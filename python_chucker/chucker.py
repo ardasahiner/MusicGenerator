@@ -1,4 +1,13 @@
 class Chucker:
+    '''
+    # creates the chucker object with a default filename
+    chuck_it = Chucker()
+    chuck_lst = ['SinOsc s => dac;', ....]
+    # write chuck_lst to file
+    chuck_it.write_chuck(chuck_lst)
+    # execute chuck file of Chucker
+    chuck_it.execute_chuck()
+    '''
     def __init__(self, name='foo.ck'):
         self.set_name(name)
     def set_name(self, name):
