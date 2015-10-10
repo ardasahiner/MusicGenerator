@@ -1,0 +1,13 @@
+Phillip:
+    1. Forward the Django server to the front port of AWS
+    2. Forward chuck sound to the webserver
+Arda:
+    1. Begin with simple tempo based chord progression generation
+        a. In essence, be able to take in a bpm and output a beat that works for it (checkout the skeleton in python_chucker/generator.py)
+    2. Afterwards, move on to more difficult patterns
+Kunal:
+    1. Make html bpm input (Ie a slider scale or whatever)
+    2. Finish up the the Swift app
+Jaemin:
+    1. Work with Arda to determine the music creation algorithm
+    
