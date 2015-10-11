@@ -15,4 +15,6 @@ We created an iOS app that registers the taps of the user, calculates the averag
 
 Our web app allows a user to choose a genre and play midi files from that genre at the tempo sent to the server by the iOS app.
 
+**Note:** Be sure to install Python Midi for reading and writing midi files from python (found at https://github.com/vishnubob/python-midi)
+
 Team Members: Phillip Kuznetsov; Arda Sahiner; Kunal Gosar; Jaemin Kim.
