@@ -5,9 +5,9 @@ var loaded_div = $('#loaded_div')
 function load_midi() {
     start_loading_handler();
 
-    console.log(["this just started"]);
-    console.log([midi_location]);
+    console.log("this just started");
     MIDI.Player.loadFile(midi_location, stop_loading_handler);
+    console.log("second line of execution")
 }
 
 function start_loading_handler(){
@@ -16,7 +16,7 @@ function start_loading_handler(){
     $('#play_midi').prop('disabled', true);
 }
 function stop_loading_handler(){
-    console.log(["this is working"])
+    console.log("this is working")
     loaded_div.show();
     loading_div.hide();
     $('#play_midi').prop('disabled',false);
