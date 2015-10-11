@@ -31,6 +31,8 @@
     <script src="{% static 'js/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/jquery.fittext.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/midi_player.js' %}"></script>
+    <script src="{% static 'js/application.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/creative.js' %}"></script>
@@ -53,7 +55,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="load_midi()">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -95,8 +97,17 @@
             <div class="header-content-inner">
                 <h1>Boost your productivity with MusicGen.</h1>
                 <hr>
+
                 <p>Keep your body in sync with everything you do. Music Generator is an adaptable music generator for adapting algorithmic music to your changing activity rhythms.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <!-- Do not edit this stuff -->
+                <div id="loading_div">
+                    <h3>Still loading...</h3>
+                </div>
+                <div id="loaded_div" style="display: none;">
+                    <h3>Loaded!</h3>
+                </div>
+                <button id="play_midi" class="btn btn-primary btn-xl page-scroll" disabled="true">Play Midi</button>
+                <!-- End uneeditables -->
             </div>
         </div>
     </header>
