@@ -31,4 +31,9 @@ function new_drop_down()
 {
     console.log('changed');
 }
-$("#genre-dropdown").change(new_drop_down);
+$(document).on('click', '.dropdown-menu li a', function () {
+    var new_genre = $(this).text()
+    $.getJSON('/api/newgenre/',{genre: new_genre} function(data, jqXHR){
+    });
+    console.log("Selected Option:"+$(this).text());
+});
