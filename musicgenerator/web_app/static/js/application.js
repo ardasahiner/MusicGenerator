@@ -26,5 +26,10 @@ function stop_loading_handler(){
 }
 
 $("#play_midi").click(function() {
-    MIDI.Player.start()
+    MIDI.Player.start();
 });
+function new_drop_down()
+{
+    console.log('changed');
+}
+$("#genre-dropdown").change(new_drop_down);
