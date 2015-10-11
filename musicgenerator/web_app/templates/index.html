@@ -65,7 +65,7 @@
           if (target.length) {
             $('html,body').animate({
               scrollTop: target.offset().top
-            }, 1000);
+            }, 1600);
             return false;
           }
         }
@@ -76,7 +76,6 @@
 </head>
 
 <body id="page-top" onload="load_midi()">
-
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -95,7 +94,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="#about">About</a>
-                      </li>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#whatwedo">What We Do</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#theteam">The Team</a>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
@@ -173,7 +177,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">The Team</h2>
+                    <strong><h2 class="section-heading">The Team</h2></strong>
                     <hr class="primary">
                 </div>
                 <div class="col-lg-3 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{% static "imgs/phil_portrait.jpg" %}" data-holder-rendered="true">
@@ -195,7 +199,7 @@
             </div>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" style="margin-bottom:110px">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -222,8 +226,6 @@
             </div>
         </div>
     </section>
-
-
 </body>
 
 </html>
