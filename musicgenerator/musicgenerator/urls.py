@@ -18,5 +18,6 @@ from django.contrib import admin
 import web_app
 urlpatterns = [
     url(r'^$', include('web_app.urls')),
+    url(r'^api/newgenre/$', web_app.views.python_query, name='python_query'),
     url(r'^admin/', include(admin.site.urls)),
 ]
