@@ -53,6 +53,26 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- scrolling function -->
+
+    <script>
+    $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+
 </head>
 
 <body id="page-top" onload="load_midi()">
@@ -75,10 +95,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
+                      </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
@@ -100,6 +117,7 @@
                 <div id="loading_div">
                     <h3>Still loading...</h3>
                 </div>
+                <h2></h2>
                 <div id="loaded_div" style="display: none;">
                     <h3>Loaded!</h3>
                 </div>
@@ -130,13 +148,50 @@
                     <h2 class="section-heading">Every  algorithm-generated track is unique, and never repeated twice.</h2>
                     <hr class="light">
                     <p class="text-faded"></p>
-                    <a href="#" class="btn btn-default btn-xl">Learn more!</a>
+                    <a href="#whatwedo" class="btn btn-default btn-xl">Learn more!</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="whatwedo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">What We Do</h2>
+                    <hr class="primary">
+                    <p>INSERT TEXT HERE</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="aboutus">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">The Team</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-3 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{% static "imgs/phil_portrait.jpg" %}" data-holder-rendered="true">
+                  <h3>Phillip Kuznetsov</h3>
+                  <p></p>
+                </div>
+                <div class="col-lg-3 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{% static "imgs/arda.jpg" %}" data-holder-rendered="true">
+                  <h3>Arda Sahiner</h3>
+                  <p></p>
+                </div>
+                <div class="col-lg-3 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{% static "imgs/jaemin_portrait.jpg" %}" data-holder-rendered="true">
+                  <h3>Jaemin Kim</h3>
+                  <p></p>
+                </div>
+                <div class="col-lg-3 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="{% static "imgs/kunal_portrait.jpg" %}" data-holder-rendered="true">
+                  <h3>Kunal Gosar</h3>
+                  <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="contact">
         <div class="container">
             <div class="row">
@@ -145,9 +200,21 @@
                     <hr class="primary">
                     <p>Want to get to know the MusicGen team a little better? Contact us.</p>
                 </div>
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-3 text-center">
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">team@musicgen.com</a></p>
+                    <p><a href="mailto:philkuz@berkeley.edu">philkuz [at] berkeley.edu</a></p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:sahinera@berkeley.edu">sahinera [at] berkeley.edu</a></p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:jaeminkim1324@berkeley.edu">jaeminkim1324 [at] berkeley.edu</a></p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:kunal.gosar@berkeley.edu">kunal.gosar [at] berkeley.edu</a></p>
                 </div>
             </div>
         </div>
