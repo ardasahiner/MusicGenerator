@@ -3,11 +3,11 @@ var loaded_div = $('#loaded_div')
 
 // default argument
 function load_midi() {
-    start_loading_handler();
-
-    console.log("this just started");
-    MIDI.Player.loadFile(midi_location, stop_loading_handler);
-    console.log("second line of execution")
+    // start_loading_handler();
+    //
+    // console.log("this just started");
+    // MIDI.Player.loadFile(midi_location, stop_loading_handler);
+    // console.log("second line of execution")
 }
 
 function start_loading_handler(){
@@ -25,5 +25,10 @@ function stop_loading_handler(){
 }
 
 $("#play_midi").click(function() {
-    MIDI.Player.start()
+    MIDI.Player.start();
 });
+function new_drop_down()
+{
+    console.log('changed');
+}
+$("#genre-dropdown").change(new_drop_down);
