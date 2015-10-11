@@ -3,11 +3,11 @@ var loaded_div = $('#loaded_div')
 
 // default argument
 function load_midi() {
-    start_loading_handler();
-
-    console.log("this just started");
-    MIDI.Player.loadFile(midi_location, stop_loading_handler);
-    console.log("second line of execution")
+    // start_loading_handler();
+    //
+    // console.log("this just started");
+    // MIDI.Player.loadFile(midi_location, stop_loading_handler);
+    // console.log("second line of execution")
 }
 
 function start_loading_handler(){
