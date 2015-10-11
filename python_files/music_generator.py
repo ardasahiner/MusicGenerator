@@ -1,7 +1,7 @@
 class MidiGenerator():
 
     cNames=[''] #the names of the c executable files TODO: change this
-    num_midi_per_bpm=10 #number of midi files that will be created for each bpm
+    num_midi_per_bpm=3 #number of midi files that will be created for each bpm
 
     #to generate midi files for bpms in set [lower_bound, upper_bound]
     def __init__(self, lower_bound, upper_bound):
