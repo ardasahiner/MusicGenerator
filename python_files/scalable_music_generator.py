@@ -4,7 +4,8 @@ import midi
 
 class Scalable_Midi_Generator():
 
-    midi_per_bpm=10
+    midi_per_bpm=8
+    tempo_interval=5
     remake_num=0
 
     def __init__(self, lower_bound, upper_bound, genre):
@@ -30,7 +31,7 @@ class Scalable_Midi_Generator():
                 current_row.append(self.create_file_from_scalable(fname, current_bpm, index))
                 index+=1
 
-            current_bpm+=1
+            current_bpm+=self.tempo_interval
 
             self.all_file_names.append(current_row)
 
@@ -46,14 +47,29 @@ class Scalable_Midi_Generator():
     def create_file_from_c(self, num):
 
         #command line argument to run c program
-        #command1_name='make '+self.genre_name+'.c'
-        #os.system(command1_name)
-        command2_name='./'+self.genre_name
+        command1_name='make '+self.genre_name
+        os.system(command1_name)
+        new_executable_name=self.genre_name+str(num)
+        os.rename(self.genre_name, new_executable_name)
+        command2_name='./'+new_executable_name
         os.system(command2_name)
+        #command3_name='rm '+self.genre_name
+        #os.system(command3_name)
 
         #rename midi file that c file created
         new_file_name='genre_'+self.genre_name+'_scalable_file_'+str(self.remake_num)+'_'+str(num)+'.mid'
         os.rename('music.mid', new_file_name)
+
+        if num!=0:
+            doc_1=open(new_file_name, 'r')
+            doc_1_string=doc_1.read(50)
+
+            prev_file_name='genre_'+self.genre_name+'_scalable_file_'+str(self.remake_num)+'_'+str(num-1)+'.mid'
+            doc_2=open(prev_file_name, 'r')
+            doc_2_string=doc_2.read(50)
+
+            if doc_1_string==doc_2_string:
+                self.create_file_from_c(num)
 
         return new_file_name
 
@@ -94,15 +110,19 @@ class Scalable_Midi_Generator():
         return int(hexidecimal, 16)
 
     def choose_midi(self, tempo):
+
+        assert tempo>=self.min_bpm
+        assert tempo<=self.max_bpm
+
         available_files_length=len(self.scalable_file_names)
 
         if available_files_length==0:
-            create_all_files()
+            self.create_all_files()
             available_files_length=len(self.scalable_file_names)
             self.remake_num+=1
 
         column_index=random.randint(0, available_files_length-1)
-        row_index=tempo-self.min_bpm
+        row_index=(tempo-self.min_bpm)//5
 
         self.scalable_file_names.pop(column_index)
 
