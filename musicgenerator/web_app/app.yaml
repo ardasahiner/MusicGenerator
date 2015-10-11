@@ -1,4 +1,4 @@
-application: musicgen
+application: musicgenerator
 evrsion: 1
 runtime: python27
 api_version: 1
@@ -18,3 +18,7 @@ handlers:
 
 - url: /.*
   script: main.application
+
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'Project_Name.settings'
