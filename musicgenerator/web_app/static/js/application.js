@@ -13,7 +13,6 @@ function load_midi() {
 function start_loading_handler(){
     loading_div.hide();
     loaded_div.hide();
-    $('#play_midi').prop('disabled', true);
 }
 function stop_loading_handler(){
     console.log("this is working")

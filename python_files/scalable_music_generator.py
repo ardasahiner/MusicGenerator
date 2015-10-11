@@ -8,7 +8,7 @@ class Scalable_Midi_Generator():
     tempo_interval=5
     remake_num=0
 
-    def __init__(self, lower_bound, upper_bound, genre):
+    def __init__(self, lower_bound=60, upper_bound=200, genre='jazz'):
         self.min_bpm=lower_bound
         self.max_bpm=upper_bound
         self.remake_num=0
