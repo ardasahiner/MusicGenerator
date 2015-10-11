@@ -31,6 +31,8 @@
     <script src="{% static 'js/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/jquery.fittext.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/midi_player.js' %}"></script>
+    <script src="{% static 'js/application.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/creative.js' %}"></script>
@@ -53,7 +55,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="load_midi()">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -96,7 +98,15 @@
                 <h1>Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <!-- Do not edit this stuff -->
+                <div id="loading_div">
+                    <h3>Still loading...</h3>
+                </div>
+                <div id="loaded_div" style="display: none;">
+                    <h3>Loaded!</h3>
+                </div>
+                <button id="play_midi" class="btn btn-primary btn-xl page-scroll" disabled="true">Play Midi</button>
+                <!-- End uneeditables -->
             </div>
         </div>
     </header>
