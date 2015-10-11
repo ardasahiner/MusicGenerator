@@ -25,8 +25,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script>
     <script type="text/javascript" charset="utf-8">
-      var midi_location = "{% static 'midi/mozart_midi.mid' %}";
+      var midi_file = "{% static 'midi/mozart_midi.mid' %}";
     </script>
     <!-- Plugin JavaScript -->
     <script src="{% static 'js/jquery.easing.min.js' %}"></script>
@@ -42,7 +43,7 @@
     <script src="{% static 'js/midi/plugin.webmidi.js' %}"></script>
     <script src="{% static 'js/midi/synesthesia.js' %}"></script>
     <script src="{% static 'js/application.js' %}"></script>
-    <script type='text/javascript' src='http://www.midijs.net/midi.js'></script>
+
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/creative.js' %}"></script>
@@ -135,7 +136,7 @@
                 <div id="loaded_div" style="display: none;">
                     <h3>Loaded!</h3>
                 </div>
-                <button id="play_midi" class="btn btn-primary btn-xl page-scroll" href="" onClick="MIDIjs.play('mozart_midi.mid');">Play Midi</button>
+                <button id="play_midi" class="btn btn-primary btn-xl page-scroll" onClick="MIDIjs.play(midi_file);">Play Midi</button>
             </div>
                 <div class="container-fluid" style="padding-top:10px">
                 <div class="dropdown">
