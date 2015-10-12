@@ -8,9 +8,9 @@ Built in C, Python, Django, Swift, JavaScript.
 
 The details:
 
-Based on Dr. John R. Francis' work in algorithmic computer music, we created c files that would build midi files of randomized songs in the genres of jazz, classical music, and video game music.
+Based on Dr. John R. Francis' work in algorithmic computer music, we used c programs that would build midi files of randomized songs in the genres of jazz, classical music, and video game music.
 
-Using python, we were able to create music generators for a given genre. These will maintain a set of midi files and when prompted return a random one at a given tempo. No two music files returned are the same.
+Using python, we were able to create music generators for a given genre. These will create and maintain a set of midi files and when prompted return a random one at a given tempo. No two music files returned are the same.
 
 We created an iOS app that registers the taps of the user, calculates the average taps per minute, and sends this data to a web server.
 
