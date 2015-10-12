@@ -3,7 +3,8 @@ An on-the-fly music generator that takes in a variable user-defined tempo and ou
 
 Input system through touch capacity of mobile devices, music output through web app interface.
 
-Built in C, Python, Django, Swift.
+Built in C, Python, Django, Swift, JavaScript.
+
 
 The details:
 
